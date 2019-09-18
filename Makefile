@@ -28,7 +28,7 @@ $(TRUE_TARGETS): %: %.o
 	$(CXX)  $< $(LDFLAGS) -o $@ 
 	
 $(OBJECTS): %.o: %.cpp
-	time $(CXX) $(CXXFLAGS) -MMD -c $< -o $@
+	$(CXX) $(CXXFLAGS) -MMD -c $< -o $@
 
 -include $(DEPEDENCY_FILES)
 
